@@ -1,0 +1,50 @@
+[
+  {
+    "pid": 1503,
+    "process": "java",
+    "symbol": "C_Initialize",
+    "timestamp_ns": 3935474729276,
+    "target_binary": "/home/cab21/softhsm2_install/lib/softhsm/libsofthsm2.so",
+    "wall_time": 1788278892.450969
+  },
+  {
+    "pid": 1503,
+    "process": "java",
+    "symbol": "C_OpenSession",
+    "timestamp_ns": 3935486727466,
+    "target_binary": "/home/cab21/softhsm2_install/lib/softhsm/libsofthsm2.so",
+    "wall_time": 1788278892.46493
+  },
+  {
+    "pid": 1503,
+    "process": "java",
+    "symbol": "C_OpenSession",
+    "timestamp_ns": 3935542708088,
+    "target_binary": "/home/cab21/softhsm2_install/lib/softhsm/libsofthsm2.so",
+    "wall_time": 1788278892.5192664
+  },
+  {
+    "pid": 1503,
+    "process": "java",
+    "symbol": "C_SignInit",
+    "timestamp_ns": 3941363293524,
+    "target_binary": "/home/cab21/softhsm2_install/lib/softhsm/libsofthsm2.so",
+    "wall_time": 1788278898.3390038
+  },
+  {
+    "pid": 1503,
+    "process": "java",
+    "symbol": "C_SignUpdate",
+    "timestamp_ns": 3941366613588,
+    "target_binary": "/home/cab21/softhsm2_install/lib/softhsm/libsofthsm2.so",
+    "wall_time": 1788278898.3423517
+  },
+  {
+    "pid": 1503,
+    "process": "java",
+    "symbol": "C_SignFinal",
+    "timestamp_ns": 3941367029448,
+    "target_binary": "/home/cab21/softhsm2_install/lib/softhsm/libsofthsm2.so",
+    "wall_time": 1788278898.34273
+  }
+]
