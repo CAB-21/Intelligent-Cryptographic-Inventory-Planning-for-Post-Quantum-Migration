@@ -1,0 +1,116 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:7f3a9e21-4c12-4890-a7d1-e94582f0cb21",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "name": "EnterprisePaymentSwitch",
+      "type": "financial-transaction-core",
+      "version": "2.1.0-PQC-Audit"
+    },
+    "summary": {
+      "totalNodes": 22,
+      "totalEdges": 28,
+      "vulnerableAssetsIdentified": 3
+    }
+  },
+  "cryptographicAssets": [
+    {
+      "assetId": "CRYPTO::RSA_2048_SIGNING",
+      "algorithm": "RSA",
+      "keyLength": 2048,
+      "layer": "Cryptographic_Primitive",
+      "riskAssessment": {
+        "quantumUrgency": 1.0,
+        "calibratedEQRS": 0.4167,
+        "riskClassification": "CRITICAL_QUANTUM_VULNERABLE"
+      },
+      "pqcMigration": {
+        "targetStandard": "NIST FIPS 204",
+        "targetAlgorithm": "ML-DSA-65",
+        "targetCategory": "Stateful/Lattice Digital Signature",
+        "bufferDeficitAnalysis": null
+      },
+      "provenance": {
+        "confidenceTier": "Level 3: Cross-Layer Correlated (AST + PID + Socket)",
+        "sources": [
+          "Tree-sitter AST (SoftHSM.cpp)",
+          "eBPF Kernel Uprobe (libsofthsm2.so)"
+        ]
+      }
+    },
+    {
+      "assetId": "CRYPTO::3DES_PIN_ENCRYPTION",
+      "algorithm": "DES3_EDE",
+      "keyLength": 168,
+      "layer": "Cryptographic_Primitive",
+      "riskAssessment": {
+        "quantumUrgency": 0.8,
+        "calibratedEQRS": 0.2511,
+        "riskClassification": "HIGH_LEGACY_VULNERABLE"
+      },
+      "pqcMigration": {
+        "targetStandard": "NIST FIPS 203",
+        "targetAlgorithm": "ML-KEM-768",
+        "targetCategory": "Lattice Key Encapsulation (KEM)",
+        "bufferDeficitAnalysis": null
+      },
+      "provenance": {
+        "confidenceTier": "Level 3: Cross-Layer Correlated (AST + PID + Socket)",
+        "sources": [
+          "Tree-sitter AST (SoftHSM.cpp)",
+          "eBPF Kernel Uprobe (libsofthsm2.so)"
+        ]
+      }
+    },
+    {
+      "assetId": "CRYPTO::SHA1_LEGACY_MAC",
+      "algorithm": "SHA-1",
+      "keyLength": 160,
+      "layer": "Cryptographic_Primitive",
+      "riskAssessment": {
+        "quantumUrgency": 0.8,
+        "calibratedEQRS": 0.2511,
+        "riskClassification": "HIGH_LEGACY_VULNERABLE"
+      },
+      "pqcMigration": {
+        "targetStandard": "NIST FIPS 205",
+        "targetAlgorithm": "SLH-DSA-128s",
+        "targetCategory": "Stateless Hash-Based Digital Signature",
+        "bufferDeficitAnalysis": null
+      },
+      "provenance": {
+        "confidenceTier": "Level 3: Cross-Layer Correlated (AST + PID + Socket)",
+        "sources": [
+          "Tree-sitter AST (SoftHSM.cpp)",
+          "eBPF Kernel Uprobe (libsofthsm2.so)"
+        ]
+      }
+    },
+    {
+      "assetId": "CRYPTO::AES_256_GCM_SESSION",
+      "algorithm": "AES",
+      "keyLength": 256,
+      "layer": "Cryptographic_Primitive",
+      "riskAssessment": {
+        "quantumUrgency": 0.0,
+        "calibratedEQRS": 0.0556,
+        "riskClassification": "QUANTUM_RESISTANT"
+      },
+      "pqcMigration": {
+        "targetStandard": "N/A",
+        "targetAlgorithm": null,
+        "targetCategory": "N/A",
+        "bufferDeficitAnalysis": null
+      },
+      "provenance": {
+        "confidenceTier": "Level 3: Cross-Layer Correlated (AST + PID + Socket)",
+        "sources": [
+          "Tree-sitter AST (SoftHSM.cpp)",
+          "eBPF Kernel Uprobe (libsofthsm2.so)"
+        ]
+      }
+    }
+  ]
+}

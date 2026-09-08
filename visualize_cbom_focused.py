@@ -1,35 +1,34 @@
 import json
 import networkx as nx
 from pyvis.network import Network
-from build_pqc_knowledge_graph import load_evidence, build_semantic_cbom_knowledge_graph
+from build_rigorous_cbom import load_evidence_files, build_rigorous_cbom_graph
 
 def main():
-    print("[*] Loading Semantic CBOM Knowledge Graph...")
-    sast_data, dast_data = load_evidence(
-        "production_sast_cbom_evidence.json", 
-        "production_dast_cbom_evidence.json"
-    )
-    G, dead_crypto, active_crypto = build_semantic_cbom_knowledge_graph(sast_data, dast_data)
+    print("[*] Loading Rigorous Cryptographic Inventory Graph...")
+    sast, dast = load_evidence_files("production_sast_cbom_evidence.json", "production_dast_cbom_evidence.json")
+    G = build_rigorous_cbom_graph(sast, dast)
 
-    net = Network(height="950px", width="100%", bgcolor="#0a0e17", font_color="#ffffff", directed=True)
+    net = Network(height="950px", width="100%", bgcolor="#080c14", font_color="#ffffff", directed=True)
     
+    # Enhanced physics layout with strong repulsion to prevent text collision
     net.set_options("""
     {
       "nodes": {
-        "font": { "size": 14, "face": "monospace", "color": "#ffffff" },
+        "font": { "size": 13, "face": "monospace", "color": "#ffffff" },
         "borderWidth": 2
       },
       "edges": {
-        "smooth": { "type": "cubicBezier", "roundness": 0.2 },
-        "arrows": { "to": { "enabled": true, "scaleFactor": 0.8 } }
+        "smooth": { "type": "cubicBezier", "roundness": 0.28 },
+        "arrows": { "to": { "enabled": true, "scaleFactor": 0.75 } },
+        "font": { "size": 9, "face": "monospace", "color": "#94a3b8", "align": "middle", "strokeWidth": 2, "strokeColor": "#080c14" }
       },
       "physics": {
         "forceAtlas2Based": {
-          "gravitationalConstant": -220,
-          "centralGravity": 0.02,
-          "springLength": 200,
-          "springStrength": 0.05,
-          "damping": 0.55
+          "gravitationalConstant": -380,
+          "centralGravity": 0.015,
+          "springLength": 260,
+          "springStrength": 0.04,
+          "damping": 0.7
         },
         "solver": "forceAtlas2Based"
       }
@@ -37,58 +36,74 @@ def main():
     """)
 
     COLOR_MAP = {
-        "Java_Switch": "#2ea043",         # Emerald Green
-        "JNI_Bridge": "#388bfd",          # Royal Blue
-        "Native_HSM": "#1f6feb",          # Indigo
-        "Memory_Buffer": "#d29922",       # Amber Square
-        "eBPF_DAST": "#db61a2",           # Pink Star
-        "PQC_Target": "#a371f7",          # Purple Diamond
-        "VULNERABLE": "#f85149"           # Crimson Red (Quantum Risk)
+        "CRITICAL": "#f85149",     # Crimson Red (Broken by Shor: RSA, PrivKey, Port 9999)
+        "LEGACY": "#d97706",       # Amber Orange (3DES, SHA-1)
+        "PQC_TARGET": "#a855f7",   # Purple Diamond (NIST Standard)
+        "DYNAMIC_EBPF": "#ec4899", # Magenta Star (Kernel Trap)
+        "APPLICATION": "#22c55e",  # Emerald Green (Java Switch Core)
+        "HSM_ENGINE": "#2563eb",   # Indigo (SoftHSM2 Token)
+        "SAFE_CIPHER": "#0ea5e9"   # Cyan/Blue (AES-256-GCM Session)
     }
 
     for n, d in G.nodes(data=True):
-        n_class = d.get("node_class", "SourceNode")
-        layer = d.get("layer", "Source_Module")
-        risk = d.get("risk", "SAFE")
-        lbl = d.get("label", n)
+        n_class = d.get("node_class")
+        urgency = d.get("quantum_urgency", 0.0)
+        risk_lbl = d.get("risk_label", "SAFE")
+        lbl = n.split("::")[-1]
 
-        if risk in ["VULNERABLE", "OVERFLOW_RISK"]:
-            color = COLOR_MAP["VULNERABLE"]
-            shape = "square" if n_class == "BufferNode" else "dot"
-            size = 28
-        elif n_class == "PQCNode":
-            color = COLOR_MAP["PQC_Target"]
+        if n_class == "PQCTargetNode":
+            color = COLOR_MAP["PQC_TARGET"]
             shape = "diamond"
-            size = 34
+            size = 36
         elif n_class == "RuntimeNode":
-            color = COLOR_MAP["eBPF_DAST"]
+            color = COLOR_MAP["DYNAMIC_EBPF"]
             shape = "star"
             size = 28
-        elif n_class == "NetworkEndpointNode":
-            color = "#00bcd4"
-            shape = "hexagon"
-            size = 26
         elif n_class == "BufferNode":
-            color = COLOR_MAP["Memory_Buffer"]
+            color = COLOR_MAP["CRITICAL"] if urgency == 1.0 else COLOR_MAP["LEGACY"]
             shape = "square"
-            size = 24
-        else:
-            color = COLOR_MAP.get(layer, "#388bfd")
-            shape = "dot"
             size = 26
+        elif "AES_256" in n:
+            color = COLOR_MAP["SAFE_CIPHER"]
+            shape = "dot"
+            size = 24
+        elif urgency == 1.0:
+            color = COLOR_MAP["CRITICAL"]
+            shape = "dot"
+            size = 28
+        elif urgency == 0.8:
+            color = COLOR_MAP["LEGACY"]
+            shape = "dot"
+            size = 24
+        elif "APP" in n:
+            color = COLOR_MAP["APPLICATION"]
+            shape = "dot"
+            size = 28
+        elif "HSM" in n:
+            color = COLOR_MAP["HSM_ENGINE"]
+            shape = "dot"
+            size = 28
+        else:
+            color = "#64748b"
+            shape = "dot"
+            size = 22
 
-        tooltip = f"<b>{n}</b><br>Class: {n_class}<br>Layer: {layer}<br>Risk: {risk}"
+        tooltip = f"<b>{n}</b><br>Class: {n_class}<br>Urgency: {urgency}<br>Risk: {risk_lbl}"
         net.add_node(n, label=lbl, title=tooltip, color=color, size=size, shape=shape)
 
     for u, v, d in G.edges(data=True):
         rel = d.get("relation", "")
-        e_color = "#a371f7" if "PQC" in rel or "FALLBACK" in rel or "INCOMPATIBLE" in rel else "#db61a2" if "DYNAMIC" in rel or "TRAPPED" in rel else "#388bfd"
-        width = 2.5 if ("PQC" in rel or "DYNAMIC" in rel or "INCOMPATIBLE" in rel) else 1.5
-        net.add_edge(u, v, title=rel, label=rel, color=e_color, width=width)
+        ev = d.get("evidence", {})
+        tier = ev.get("confidence_tier", "Static")
+        
+        e_color = "#a855f7" if "MIGRATION" in rel or "TARGET" in rel or "DEFICIT" in rel else "#ec4899" if "DYNAMIC" in rel or "TRAPPED" in rel else "#3b82f6"
+        width = 2.5 if "DEFICIT" in rel or "DYNAMIC" in rel else 1.5
+        tooltip = f"Relation: {rel}<br>Provenance: {tier}"
+        net.add_edge(u, v, title=tooltip, label=rel, color=e_color, width=width)
 
     output_html = "pqc_cbom_knowledge_graph.html"
     net.write_html(output_html)
-    print(f"[+] Knowledge Graph rendered with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges to '{output_html}'.")
+    print(f"[+] Knowledge Graph successfully generated in '{output_html}'.")
 
 if __name__ == "__main__":
     main()
