@@ -1,163 +1,162 @@
 {
-  "graph_summary": {
-    "total_nodes": 17,
-    "total_edges": 23,
-    "density": 0.0846
+  "summary": {
+    "total_nodes": 16,
+    "total_edges": 22,
+    "active_crypto": [
+      "C_SignInit",
+      "C_SignFinal",
+      "ISO8583_Switch_PrivKey"
+    ],
+    "dead_crypto": [
+      "CKM_DES3_CBC",
+      "CKM_MD5_RSA_PKCS",
+      "CKM_RC4"
+    ]
   },
   "predicted_links": [
     {
-      "source": "APP::EnterprisePaymentSwitch",
-      "target": "PQC::ML-DSA-65",
-      "relation": "PREDICTED_END_TO_END_MIGRATION",
-      "confidence": 0.9971
-    },
-    {
-      "source": "DAST::java::C_SignFinal",
-      "target": "PQC::ML-DSA-65",
-      "relation": "PREDICTED_RUNTIME_REPLACEMENT",
-      "confidence": 1.0
+      "source": "EnterprisePaymentSwitch",
+      "target": "ML-DSA-65",
+      "relation": "PREDICTED_END_TO_END_PQC_PATHWAY",
+      "confidence": 0.9999
     }
   ],
   "migration_roadmap": [
     {
       "stage_index": 1,
-      "component_id": 0,
+      "component_id": 3,
       "elements": [
-        "PQC::ML-DSA-65"
+        "ML-DSA-65"
       ],
       "vulnerable_elements": [],
       "is_critical_path": false
     },
     {
       "stage_index": 2,
-      "component_id": 1,
+      "component_id": 5,
       "elements": [
-        "BUF::Signature_Buffer_256B"
+        "SLH-DSA-128s"
       ],
-      "vulnerable_elements": [
-        "BUF::Signature_Buffer_256B"
-      ],
-      "is_critical_path": true
+      "vulnerable_elements": [],
+      "is_critical_path": false
     },
     {
       "stage_index": 3,
-      "component_id": 2,
+      "component_id": 4,
       "elements": [
-        "ALGO::RSA_2048_PKCS"
+        "Signature_Buffer_256B"
       ],
       "vulnerable_elements": [
-        "ALGO::RSA_2048_PKCS"
+        "Signature_Buffer_256B"
       ],
       "is_critical_path": true
     },
     {
       "stage_index": 4,
-      "component_id": 12,
+      "component_id": 6,
       "elements": [
-        "PQC::ML-KEM-768"
+        "SoftHSMv2_Core"
       ],
       "vulnerable_elements": [],
       "is_critical_path": false
     },
     {
       "stage_index": 5,
-      "component_id": 11,
+      "component_id": 8,
       "elements": [
-        "KEY::ISO8583_Switch_PrivKey"
+        "ML-KEM-768"
       ],
-      "vulnerable_elements": [
-        "KEY::ISO8583_Switch_PrivKey"
-      ],
-      "is_critical_path": true
+      "vulnerable_elements": [],
+      "is_critical_path": false
     },
     {
       "stage_index": 6,
-      "component_id": 13,
+      "component_id": 7,
       "elements": [
-        "KEYSTORE::PKCS11_Keystore"
+        "ISO8583_Switch_PrivKey"
       ],
       "vulnerable_elements": [
-        "KEYSTORE::PKCS11_Keystore"
+        "ISO8583_Switch_PrivKey"
       ],
       "is_critical_path": true
     },
     {
       "stage_index": 7,
-      "component_id": 9,
+      "component_id": 1,
       "elements": [
-        "BUF::Message_Buffer_4096B"
+        "Message_Buffer_4096B"
       ],
       "vulnerable_elements": [],
       "is_critical_path": false
     },
     {
       "stage_index": 8,
-      "component_id": 3,
+      "component_id": 14,
       "elements": [
-        "NATIVE::SoftHSMv2_Token"
+        "C_SignFinal"
       ],
       "vulnerable_elements": [],
       "is_critical_path": false
     },
     {
       "stage_index": 9,
-      "component_id": 14,
+      "component_id": 13,
       "elements": [
-        "CRYPTO::SunPKCS11_Provider"
+        "C_SignUpdate"
       ],
       "vulnerable_elements": [],
       "is_critical_path": false
     },
     {
       "stage_index": 10,
-      "component_id": 10,
+      "component_id": 12,
       "elements": [
-        "MOD::ISO8583_Packager"
+        "C_SignInit"
       ],
       "vulnerable_elements": [],
       "is_critical_path": false
     },
     {
       "stage_index": 11,
-      "component_id": 8,
+      "component_id": 11,
       "elements": [
-        "DAST::java::C_SignFinal"
+        "C_OpenSession"
       ],
       "vulnerable_elements": [],
       "is_critical_path": false
     },
     {
       "stage_index": 12,
-      "component_id": 7,
+      "component_id": 10,
       "elements": [
-        "DAST::java::C_SignUpdate"
+        "C_Initialize"
       ],
       "vulnerable_elements": [],
       "is_critical_path": false
     },
     {
       "stage_index": 13,
-      "component_id": 6,
+      "component_id": 9,
       "elements": [
-        "DAST::java::C_SignInit"
+        "SunPKCS11_Provider"
       ],
       "vulnerable_elements": [],
       "is_critical_path": false
     },
     {
       "stage_index": 14,
-      "component_id": 5,
+      "component_id": 2,
       "elements": [
-        "DAST::java::C_OpenSession"
+        "ISO8583_Packager"
       ],
       "vulnerable_elements": [],
       "is_critical_path": false
     },
     {
       "stage_index": 15,
-      "component_id": 4,
+      "component_id": 0,
       "elements": [
-        "DAST::java::C_Initialize"
+        "Port 9999 (ISO8583)"
       ],
       "vulnerable_elements": [],
       "is_critical_path": false
@@ -166,7 +165,7 @@
       "stage_index": 16,
       "component_id": 15,
       "elements": [
-        "APP::EnterprisePaymentSwitch"
+        "EnterprisePaymentSwitch"
       ],
       "vulnerable_elements": [],
       "is_critical_path": false

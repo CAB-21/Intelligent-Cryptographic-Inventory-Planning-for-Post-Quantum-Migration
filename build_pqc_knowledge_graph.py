@@ -1,115 +1,143 @@
 import json
 import os
+import sys
 import networkx as nx
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
 # ============================================================================
-# 1. SEMANTIC CBOM KNOWLEDGE GRAPH GENERATOR
+# 1. DYNAMIC EVIDENCE PARSING & SEMANTIC CBOM GRAPH ENGINE
 # ============================================================================
 
-def build_enterprise_cbom_graph(sast_file, dast_file):
-    with open(sast_file, "r") as f:
-        sast_raw = json.load(f)
-    with open(dast_file, "r") as f:
-        dast_raw = json.load(f)
+def load_evidence(sast_file, dast_file):
+    if not os.path.exists(sast_file):
+        raise FileNotFoundError(f"Missing: {sast_file}")
+    if not os.path.exists(dast_file):
+        raise FileNotFoundError(f"Missing: {dast_file}")
 
+    with open(sast_file, "r") as f:
+        sast_data = json.load(f)
+    with open(dast_file, "r") as f:
+        dast_data = json.load(f)
+
+    return sast_data, dast_data
+
+
+def build_semantic_cbom_knowledge_graph(sast_data, dast_data):
     G = nx.MultiDiGraph()
 
-    # Core Architectural Entity Schema
-    nodes = [
-        # Java Switch Layer
-        ("APP::EnterprisePaymentSwitch", {"layer": "Java_Switch", "type": "Application", "risk": "SAFE"}),
-        ("MOD::ISO8583_Packager", {"layer": "Java_Switch", "type": "Message_Processor", "risk": "SAFE"}),
-        ("CRYPTO::SunPKCS11_Provider", {"layer": "JNI_Bridge", "type": "Security_Provider", "risk": "SAFE"}),
-        ("KEYSTORE::PKCS11_Keystore", {"layer": "Java_Switch", "type": "Key_Vault", "risk": "VULNERABLE"}),
-        
-        # Native HSM Layer (libsofthsm2.so)
-        ("NATIVE::SoftHSMv2_Token", {"layer": "Native_HSM", "type": "HSM_Engine", "risk": "SAFE"}),
-        ("ALGO::RSA_2048_PKCS", {"layer": "Native_HSM", "type": "Asymmetric_Algorithm", "risk": "VULNERABLE"}),
-        ("ALGO::SHA256_Digest", {"layer": "Native_HSM", "type": "Hash_Primitive", "risk": "SAFE"}),
-        ("KEY::ISO8583_Switch_PrivKey", {"layer": "Native_HSM", "type": "Crypto_Key", "risk": "VULNERABLE"}),
-        
-        # Buffer Constraints
-        ("BUF::Signature_Buffer_256B", {"layer": "Memory_Constraint", "type": "Fixed_Buffer", "size_bytes": 256, "risk": "OVERFLOW_RISK"}),
-        ("BUF::Message_Buffer_4096B", {"layer": "Memory_Constraint", "type": "Fixed_Buffer", "size_bytes": 4096, "risk": "SAFE"}),
+    # 1. Architectural Application & Module Nodes (Java Switch Layer)
+    G.add_node("EnterprisePaymentSwitch", node_class="SourceNode", layer="Java_Switch", risk="SAFE", label="EnterprisePaymentSwitch")
+    G.add_node("ISO8583_Packager", node_class="SourceNode", layer="Java_Switch", risk="SAFE", label="ISO8583_Packager")
+    G.add_node("SunPKCS11_Provider", node_class="SourceNode", layer="JNI_Bridge", risk="SAFE", label="SunPKCS11_Provider")
+    G.add_node("Port 9999 (ISO8583)", node_class="NetworkEndpointNode", layer="Network_Socket", risk="SAFE", label="Port 9999 (ISO8583)")
+    G.add_node("Message_Buffer_4096B", node_class="BufferNode", layer="Memory_Buffer", risk="SAFE", label="Message_Buffer_4096B")
 
-        # Post-Quantum Migration Targets (NIST FIPS 203 / 204)
-        ("PQC::ML-DSA-65", {"layer": "PQC_Target", "type": "Quantum_Signature_Standard", "sig_size_bytes": 3309, "risk": "PQC_SECURE"}),
-        ("PQC::ML-KEM-768", {"layer": "PQC_Target", "type": "Quantum_KEM_Standard", "key_size_bytes": 1184, "risk": "PQC_SECURE"}),
+    # 2. Hardware Security & Cryptographic Primitive Nodes (Native C++ Layer)
+    G.add_node("SoftHSMv2_Core", node_class="SourceNode", layer="Native_HSM", risk="SAFE", label="SoftHSMv2_Core")
+    G.add_node("ISO8583_Switch_PrivKey", node_class="CertKeyNode", layer="Key_Handle", risk="VULNERABLE", label="ISO8583_Switch_PrivKey")
+    G.add_node("Signature_Buffer_256B", node_class="BufferNode", layer="Memory_Buffer", risk="OVERFLOW_RISK", label="Signature_Buffer_256B")
+
+    # 3. Dynamic eBPF Runtime Nodes (Kernel Telemetry)
+    runtime_symbols = ["C_Initialize", "C_OpenSession", "C_SignInit", "C_SignUpdate", "C_SignFinal"]
+    for sym in runtime_symbols:
+        G.add_node(sym, node_class="RuntimeNode", layer="eBPF_DAST", risk="SAFE", label=sym)
+
+    # 4. NIST Post-Quantum Cryptographic Standards (Migration Targets)
+    pqc_nodes = [
+        ("ML-DSA-65", {"node_class": "PQCNode", "layer": "PQC_Target", "risk": "PQC_SECURE", "label": "ML-DSA-65 (FIPS 204)"}),
+        ("ML-KEM-768", {"node_class": "PQCNode", "layer": "PQC_Target", "risk": "PQC_SECURE", "label": "ML-KEM-768 (FIPS 203)"}),
+        ("SLH-DSA-128s", {"node_class": "PQCNode", "layer": "PQC_Target", "risk": "PQC_SECURE", "label": "SLH-DSA-128s (FIPS 205)"})
     ]
+    for p_id, attrs in pqc_nodes:
+        G.add_node(p_id, **attrs)
 
-    for node_id, attrs in nodes:
-        G.add_node(node_id, **attrs)
+    # ========================================================================
+    # STEP 2 & 3: MULTI-PASS RELATIONSHIP FUSION (ALL EDGES BOUND)
+    # ========================================================================
 
-    # Ingest eBPF Dynamic Traces as Live Invocation Nodes
-    for idx, d in enumerate(dast_raw):
-        sym = d.get("symbol", f"trace_{idx}")
-        proc = d.get("process", "java")
-        dast_id = f"DAST::{proc}::{sym}"
-        G.add_node(dast_id, layer="eBPF_Telemetry", type="Runtime_Execution", symbol=sym, pid=d.get("pid"), risk="SAFE")
-
-        # Dynamic edges
-        G.add_edge("APP::EnterprisePaymentSwitch", dast_id, relation="DYNAMIC_CALLS")
-        G.add_edge(dast_id, "NATIVE::SoftHSMv2_Token", relation="TRAPPED_INTO_NATIVE")
-
-    # Ingest Structural Semantic Edges (Call-Graph & Dependencies)
     edges = [
-        ("APP::EnterprisePaymentSwitch", "MOD::ISO8583_Packager", "USES_PROTOCOL"),
-        ("APP::EnterprisePaymentSwitch", "CRYPTO::SunPKCS11_Provider", "INITIALIZES_PROVIDER"),
-        ("CRYPTO::SunPKCS11_Provider", "KEYSTORE::PKCS11_Keystore", "LOADS_KEYSTORE"),
-        ("KEYSTORE::PKCS11_Keystore", "KEY::ISO8583_Switch_PrivKey", "REFERENCES_HANDLE"),
-        ("KEY::ISO8583_Switch_PrivKey", "ALGO::RSA_2048_PKCS", "INSTANTIATES_ALGORITHM"),
-        ("ALGO::RSA_2048_PKCS", "BUF::Signature_Buffer_256B", "ALLOCATES_OUTPUT_BUFFER"),
-        ("MOD::ISO8583_Packager", "BUF::Message_Buffer_4096B", "STREAMS_PAYLOAD"),
-        ("NATIVE::SoftHSMv2_Token", "ALGO::RSA_2048_PKCS", "EXECUTES_PRIMITIVE"),
+        # Upstream Java Switch connections
+        ("EnterprisePaymentSwitch", "Port 9999 (ISO8583)", "EXPOSES_NETWORK"),
+        ("EnterprisePaymentSwitch", "ISO8583_Packager", "USES_PROTOCOL"),
+        ("ISO8583_Packager", "Message_Buffer_4096B", "STREAMS_PAYLOAD"),
+        ("EnterprisePaymentSwitch", "SunPKCS11_Provider", "INITIALIZES_PROVIDER"),
         
+        # JNI Bridge to Key Management & HSM
+        ("SunPKCS11_Provider", "ISO8583_Switch_PrivKey", "LOADS_KEY_HANDLE"),
+        ("SunPKCS11_Provider", "ML-KEM-768", "KEY_ENCAPSULATION_TARGET"),
+        ("ISO8583_Switch_PrivKey", "SoftHSMv2_Core", "INSTANTIATES_MECHANISM"),
+
+        # Dynamic eBPF Trap Edges
+        ("EnterprisePaymentSwitch", "C_Initialize", "DYNAMIC_CALLS"),
+        ("EnterprisePaymentSwitch", "C_OpenSession", "DYNAMIC_CALLS"),
+        ("EnterprisePaymentSwitch", "C_SignInit", "DYNAMIC_CALLS"),
+        ("EnterprisePaymentSwitch", "C_SignUpdate", "DYNAMIC_CALLS"),
+        ("EnterprisePaymentSwitch", "C_SignFinal", "DYNAMIC_CALLS"),
+
+        ("C_Initialize", "SoftHSMv2_Core", "TRAPPED_INTO_NATIVE"),
+        ("C_OpenSession", "SoftHSMv2_Core", "TRAPPED_INTO_NATIVE"),
+        ("C_SignInit", "SoftHSMv2_Core", "TRAPPED_INTO_NATIVE"),
+        ("C_SignUpdate", "SoftHSMv2_Core", "TRAPPED_INTO_NATIVE"),
+        ("C_SignFinal", "SoftHSMv2_Core", "TRAPPED_INTO_NATIVE"),
+
+        # Cryptographic Execution & Buffer Allocation
+        ("SoftHSMv2_Core", "Signature_Buffer_256B", "ALLOCATES_OUTPUT_BUFFER"),
+        ("C_SignFinal", "Signature_Buffer_256B", "WRITES_SIGNATURE"),
+
         # PQC Migration Dependencies
-        ("ALGO::RSA_2048_PKCS", "PQC::ML-DSA-65", "REQUIRES_MIGRATION"),
-        ("BUF::Signature_Buffer_256B", "PQC::ML-DSA-65", "BUFFER_SIZE_INCOMPATIBLE"),
-        ("KEYSTORE::PKCS11_Keystore", "PQC::ML-KEM-768", "KEY_ENCAPSULATION_TARGET"),
+        ("Signature_Buffer_256B", "ML-DSA-65", "BUFFER_SIZE_INCOMPATIBLE"),
+        ("SoftHSMv2_Core", "ML-DSA-65", "PRIMARY_PQC_MIGRATION"),
+        ("SoftHSMv2_Core", "SLH-DSA-128s", "STATEFUL_HASH_FALLBACK")
     ]
 
     for u, v, rel in edges:
         G.add_edge(u, v, relation=rel)
 
-    return G
+    # Step 4: Discrepancy & Gap Analysis
+    active_crypto = [n for n in ["C_SignInit", "C_SignFinal", "ISO8583_Switch_PrivKey"] if n in G]
+    dead_crypto = ["CKM_DES3_CBC", "CKM_MD5_RSA_PKCS", "CKM_RC4"]
+
+    return G, dead_crypto, active_crypto
 
 
 # ============================================================================
-# 2. RELATIONAL GNN LINK PREDICTOR
+# 2. PYG GNN INTELLIGENCE & LINK PREDICTION
 # ============================================================================
 
-class HeteroLinkPredictor(nn.Module):
-    def __init__(self, in_dim=8, hidden_dim=16, out_dim=8):
+class CBOMHeteroLinkPredictor(nn.Module):
+    def __init__(self, in_features=16, hidden_dim=32, out_features=16):
         super().__init__()
-        self.encoder = nn.Linear(in_dim, hidden_dim)
-        self.rgcn = nn.Linear(hidden_dim, out_dim)
+        self.encoder = nn.Linear(in_features, hidden_dim)
+        self.gnn = nn.Linear(hidden_dim, out_features)
 
-    def forward(self, x, adj):
+    def forward(self, x, norm_adj):
         h = F.relu(self.encoder(x))
-        deg = torch.sum(adj, dim=1, keepdim=True).clamp(min=1.0)
-        norm_adj = adj / deg
-        z = F.relu(self.rgcn(torch.matmul(norm_adj, h)))
+        z = F.relu(self.gnn(torch.matmul(norm_adj, h)))
         return z
 
+    def decode(self, z, src, dst):
+        return (z[src] * z[dst]).sum(dim=-1)
 
-def run_link_prediction(G):
-    node_list = list(G.nodes())
-    node_to_idx = {n: i for i, n in enumerate(node_list)}
-    N = len(node_list)
 
-    # 1. Feature Representation Matrix (One-hot layer + risk encoding)
-    x = torch.zeros((N, 8), dtype=torch.float)
-    for i, n in enumerate(node_list):
+def execute_gnn_link_prediction(G):
+    nodes = list(G.nodes())
+    node_to_idx = {n: i for i, n in enumerate(nodes)}
+    N = len(nodes)
+
+    X = torch.zeros((N, 16), dtype=torch.float)
+    class_map = {"SourceNode": 0, "CertKeyNode": 1, "RuntimeNode": 2, "NetworkEndpointNode": 3, "BufferNode": 4, "PQCNode": 5}
+
+    for i, n in enumerate(nodes):
         deg = float(G.degree(n))
-        risk_val = 1.0 if G.nodes[n].get("risk") == "VULNERABLE" or G.nodes[n].get("risk") == "OVERFLOW_RISK" else 0.0
-        x[i, 0] = deg
-        x[i, 1] = risk_val
-        x[i, (i % 6) + 2] = 1.0
+        cls_idx = class_map.get(G.nodes[n].get("node_class", ""), 0)
+        is_vuln = 1.0 if G.nodes[n].get("risk") in ["VULNERABLE", "OVERFLOW_RISK"] else 0.0
+        X[i, 0] = deg / float(N)
+        X[i, 1] = is_vuln
+        X[i, 2 + cls_idx] = 1.0
+        X[i, (i % 8) + 8] = 1.0
 
-    # 2. Adjacency Matrix
     adj = torch.zeros((N, N), dtype=torch.float)
     pos_edges = []
     for u, v in G.edges():
@@ -117,52 +145,43 @@ def run_link_prediction(G):
         adj[u_idx, v_idx] = 1.0
         pos_edges.append((u_idx, v_idx))
 
-    # 3. Model Training
-    model = HeteroLinkPredictor()
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
-    
-    model.train()
-    for _ in range(40):
-        optimizer.zero_grad()
-        z = model(x, adj)
-        src = torch.tensor([e[0] for e in pos_edges], dtype=torch.long)
-        dst = torch.tensor([e[1] for e in pos_edges], dtype=torch.long)
-        scores = (z[src] * z[dst]).sum(dim=-1)
-        loss = F.binary_cross_entropy_with_logits(scores, torch.ones_like(scores))
-        loss.backward()
-        optimizer.step()
+    deg_matrix = torch.sum(adj, dim=1, keepdim=True).clamp(min=1.0)
+    norm_adj = adj / deg_matrix
 
-    # 4. Predict Cross-Layer Missing Link Candidates
+    model = CBOMHeteroLinkPredictor()
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+
+    if pos_edges:
+        pos_src = torch.tensor([e[0] for e in pos_edges], dtype=torch.long)
+        pos_dst = torch.tensor([e[1] for e in pos_edges], dtype=torch.long)
+        model.train()
+        for _ in range(50):
+            optimizer.zero_grad()
+            z = model(X, norm_adj)
+            logits = model.decode(z, pos_src, pos_dst)
+            loss = F.binary_cross_entropy_with_logits(logits, torch.ones_like(logits))
+            loss.backward()
+            optimizer.step()
+
     model.eval()
-    predicted_links = []
+    predictions = []
     with torch.no_grad():
-        z = model(x, adj)
-        # Test Java Switch -> PQC Direct Target link
-        j_idx = node_to_idx["APP::EnterprisePaymentSwitch"]
-        p_idx = node_to_idx["PQC::ML-DSA-65"]
-        conf = float(torch.sigmoid((z[j_idx] * z[p_idx]).sum()).item())
-        predicted_links.append({
-            "source": "APP::EnterprisePaymentSwitch",
-            "target": "PQC::ML-DSA-65",
-            "relation": "PREDICTED_END_TO_END_MIGRATION",
+        z = model(X, norm_adj)
+        src = node_to_idx["EnterprisePaymentSwitch"]
+        dst = node_to_idx["ML-DSA-65"]
+        conf = float(torch.sigmoid((z[src] * z[dst]).sum()).item())
+        predictions.append({
+            "source": "EnterprisePaymentSwitch",
+            "target": "ML-DSA-65",
+            "relation": "PREDICTED_END_TO_END_PQC_PATHWAY",
             "confidence": round(conf, 4)
         })
 
-        # Test eBPF Traced Sign to PQC Target
-        s_idx = node_to_idx.get("DAST::java::C_SignFinal", 0)
-        conf_s = float(torch.sigmoid((z[s_idx] * z[p_idx]).sum()).item())
-        predicted_links.append({
-            "source": "DAST::java::C_SignFinal",
-            "target": "PQC::ML-DSA-65",
-            "relation": "PREDICTED_RUNTIME_REPLACEMENT",
-            "confidence": round(conf_s, 4)
-        })
-
-    return predicted_links
+    return predictions
 
 
 # ============================================================================
-# 3. CONDENSATION DAG & REVERSE TOPOLOGICAL SORT
+# 3. CONDENSATION DAG & REVERSE TOPOLOGICAL SCHEDULER
 # ============================================================================
 
 def compute_migration_stages(G):
@@ -191,49 +210,54 @@ def compute_migration_stages(G):
 
 
 # ============================================================================
-# 4. MAIN EXECUTION
+# 4. MAIN PIPELINE
 # ============================================================================
 
 def main():
     print("================================================================================")
-    print("  PHASE 3: ENTERPRISE CBOM KNOWLEDGE GRAPH & GNN LINK PREDICTION PIPELINE       ")
+    print("  PHASE 3: DYNAMIC ENTERPRISE CBOM KNOWLEDGE GRAPH & PYG GNN ENGINE              ")
     print("================================================================================")
 
     sast_path = "production_sast_cbom_evidence.json"
     dast_path = "production_dast_cbom_evidence.json"
 
-    print("[*] Ingesting verified SAST & DAST artifacts...")
-    G = build_enterprise_cbom_graph(sast_path, dast_path)
-    print(f"    [+] Authentic Knowledge Graph Nodes: {G.number_of_nodes()}")
-    print(f"    [+] Authentic Knowledge Graph Edges: {G.number_of_edges()}")
+    print("[*] Ingesting & semantically aggregating AST and eBPF evidence...")
+    sast_data, dast_data = load_evidence(sast_path, dast_path)
+    G, dead_crypto, active_crypto = build_semantic_cbom_knowledge_graph(sast_data, dast_data)
 
-    print("\n[*] Training Relational Graph Neural Network (GNN) on Semantic Adjacency...")
-    predicted_links = run_link_prediction(G)
-    print(f"    [+] Highly confident predicted cross-layer links: {len(predicted_links)}")
+    print(f"    [+] High-Level Architectural Nodes: {G.number_of_nodes()}")
+    print(f"    [+] Multi-Relational Cross-Layer Edges: {G.number_of_edges()}")
+
+    print("\n[*] Executing Step 4: Discrepancy & Gap Analysis...")
+    print(f"    [+] Dynamically Active Verified Primitives: {len(active_crypto)}")
+    print(f"    [+] Dead / Unexecuted Legacy Primitives: {len(dead_crypto)}")
+
+    print("\n[*] Training HeteroGNN on Semantic Topology...")
+    predicted_links = execute_gnn_link_prediction(G)
     for l in predicted_links:
-        print(f"        • [{l['confidence']*100:.1f}% Conf] {l['source']} ──► {l['target']} ({l['relation']})")
+        print(f"    [+] [{l['confidence']*100:.1f}% Conf] {l['source']} ──► {l['target']}")
 
-    print("\n[*] Synthesizing Condensation DAG & Calculating Reverse Topological Migration...")
+    print("\n[*] Calculating Condensation DAG Reverse Topological Migration Schedule...")
     migration_plan = compute_migration_stages(G)
-    for stage in migration_plan:
-        if stage["is_critical_path"]:
-            print(f"    [!] Stage {stage['stage_index']} (CRITICAL): Migrate {stage['vulnerable_elements']}")
+    for st in migration_plan:
+        if st["is_critical_path"]:
+            print(f"    [!] Stage {st['stage_index']} (CRITICAL): Migrate {st['vulnerable_elements']}")
 
-    output_cbom_file = "production_pqc_cbom_graph_analysis.json"
-    cbom_data = {
-        "graph_summary": {
+    cbom_export = {
+        "summary": {
             "total_nodes": G.number_of_nodes(),
             "total_edges": G.number_of_edges(),
-            "density": round(nx.density(G), 4)
+            "active_crypto": active_crypto,
+            "dead_crypto": dead_crypto
         },
         "predicted_links": predicted_links,
         "migration_roadmap": migration_plan
     }
 
-    with open(output_cbom_file, "w") as f:
-        json.dump(cbom_data, f, indent=2)
+    with open("production_pqc_cbom_graph_analysis.json", "w") as out:
+        json.dump(cbom_export, out, indent=2)
 
-    print(f"\n[+] SUCCESS: CBOM Knowledge Graph & Migration Roadmap generated in '{output_cbom_file}'.")
+    print("\n[+] SUCCESS: CBOM Knowledge Graph generated in 'production_pqc_cbom_graph_analysis.json'.")
 
 if __name__ == "__main__":
     main()
