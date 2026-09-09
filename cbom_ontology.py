@@ -1,91 +1,98 @@
 """
-cbom_ontology.py: Formal Heterogeneous Cryptographic Dependency Ontology
-Defines entity classes, edge relations, provenance tiers, and quantum risk scoring.
+cbom_ontology.py: Canonical Cryptographic Ontology & Epistemic Provenance
+Strict separation of primitive classes, NIST migration strategies, and evidence tiers.
 """
 
 from enum import Enum
-from dataclasses import dataclass
 from typing import Dict, List, Optional, Any
 
 # ============================================================================
-# 1. ENTITY CLASSIFICATION (NODE TYPES)
+# 1. ENTITY & PRIMITIVE CLASSIFICATION
 # ============================================================================
 
 class NodeClass(Enum):
-    SOURCE_NODE = "SourceNode"                 # Java / C++ Code Scope
-    CRYPTO_NODE = "CryptoNode"                 # Cipher, Mechanism, Digest Primitive
-    CERT_KEY_NODE = "CertKeyNode"             # Key Handles, Keystores, Certificates
-    BUFFER_NODE = "BufferNode"                 # Memory Buffers & Allocations
-    RUNTIME_NODE = "RuntimeNode"               # Kernel eBPF Telemetry Events
-    NETWORK_ENDPOINT_NODE = "NetworkEndpoint"  # Socket Pairs & Protocol Channels
-    PQC_TARGET_NODE = "PQCTargetNode"          # NIST FIPS 203/204/205 Standards
+    SOURCE_NODE = "SourceNode"                 # Code scope (Java class / C++ file)
+    CRYPTO_PRIMITIVE = "CryptoPrimitiveNode"   # Distinct cryptographic algorithm/mechanism
+    KEY_ASSET = "KeyAssetNode"                 # Handle, keystore, or private key
+    BUFFER_NODE = "BufferNode"                 # Memory allocation
+    RUNTIME_EVENT = "RuntimeEventNode"         # Distinct eBPF kernel trace
+    NETWORK_ENDPOINT = "NetworkEndpointNode"   # Live socket pair
+    PQC_TARGET = "PQCTargetNode"               # NIST FIPS standard replacement
+
+
+class PrimitiveCategory(Enum):
+    ASYMMETRIC_SIGNATURE = "Digital Signature"
+    KEY_ENCAPSULATION = "Key Encapsulation Mechanism (KEM)"
+    SYMMETRIC_CIPHER = "Symmetric Encryption"
+    MAC = "Message Authentication Code"
+    HASH_DIGEST = "Cryptographic Hash Function"
+    KEY_AGREEMENT = "Key Agreement (DH/ECDH)"
 
 
 class ProvenanceTier(Enum):
-    TIER_1_DYNAMIC_OBSERVED = "Level 1: Dynamically Observed (eBPF Kernel Trap)"
-    TIER_2_STATIC_ESTABLISHED = "Level 2: Statically Established (Tree-sitter AST)"
-    TIER_3_CROSS_LAYER_FUSED = "Level 3: Cross-Layer Correlated (AST + PID + Socket)"
-    TIER_4_GNN_INFERRED = "Level 4: GNN Inferred (Probabilistic Link)"
+    TIER_1_DYNAMIC_OBSERVED = "Tier 1: Dynamically Observed (eBPF Kernel Trace)"
+    TIER_2_STATIC_ESTABLISHED = "Tier 2: Statically Established (Tree-sitter AST)"
+    TIER_3_CROSS_LAYER_FUSED = "Tier 3: Cross-Layer Correlated (AST + DAST + PID)"
+    TIER_4_GNN_CANDIDATE = "Tier 4: GNN Unresolved Candidate Link"
 
 
 class QuantumUrgency(Enum):
-    CRITICAL_VULNERABLE = 1.0   # Shor's algorithm broken (RSA, ECDSA, ECDH)
-    HIGH_LEGACY_VULN = 0.8      # Broken classical (DES, 3DES, MD5, SHA-1)
-    MEDIUM_GROVER_RISK = 0.3    # Grover's algorithm impact (AES-128)
-    QUANTUM_RESISTANT = 0.0     # AES-256, SHA-384, SHA-512, NIST PQC
+    CRITICAL_SHOR_BROKEN = 1.0   # RSA, ECDSA, DSA, ECDH
+    HIGH_LEGACY_BROKEN = 0.8     # MD5, SHA-1, DES, 3DES
+    MEDIUM_GROVER_REDUCE = 0.3   # AES-128
+    QUANTUM_RESISTANT = 0.0      # AES-256, SHA-384, SHA-512, NIST PQC
 
 
 # ============================================================================
-# 2. EVIDENCE DATA STRUCTURES
+# 2. CANONICAL REPLACEMENT STRATEGIES (NIST FIPS COMPLIANT)
 # ============================================================================
 
-@dataclass
-class MultiModalEvidence:
-    ast_provenance: Optional[str] = None
-    ebpf_uprobe: Optional[str] = None
-    pid: Optional[int] = None
-    binary_path: Optional[str] = None
-    socket_endpoint: Optional[str] = None
-    confidence_tier: ProvenanceTier = ProvenanceTier.TIER_2_STATIC_ESTABLISHED
-
-    def to_dict(self) -> Dict[str, Any]:
-        return {
-            "ast_provenance": self.ast_provenance,
-            "ebpf_uprobe": self.ebpf_uprobe,
-            "pid": self.pid,
-            "binary_path": self.binary_path,
-            "socket_endpoint": self.socket_endpoint,
-            "confidence_tier": self.confidence_tier.value
-        }
-
-
-# ============================================================================
-# 3. NIST PQC REPLACEMENT SPECIFICATIONS (GROUND TRUTH)
-# ============================================================================
-
-NIST_PQC_CATALOG = {
-    "ML-DSA-65": {
+CANONICAL_MIGRATION_STRATEGIES = {
+    # Signatures (RSA/ECDSA -> ML-DSA-65 NIST FIPS 204)
+    "RSA_SIGNATURE": {
+        "target": "ML-DSA-65",
         "standard": "NIST FIPS 204",
-        "category": "Stateful/Lattice Digital Signature",
-        "public_key_bytes": 1952,
-        "signature_bytes": 3309,
-        "security_category": 3,
-        "replaces": ["RSA-2048", "RSA-4096", "ECDSA-P256", "CKM_RSA_PKCS"]
+        "category": PrimitiveCategory.ASYMMETRIC_SIGNATURE.value,
+        "type": "Stateless Lattice Digital Signature",
+        "required_output_bytes": 3309
     },
-    "ML-KEM-768": {
+    "ECDSA_SIGNATURE": {
+        "target": "ML-DSA-65",
+        "standard": "NIST FIPS 204",
+        "category": PrimitiveCategory.ASYMMETRIC_SIGNATURE.value,
+        "type": "Stateless Lattice Digital Signature",
+        "required_output_bytes": 3309
+    },
+    # Key Agreement / KEM (DH/ECDH -> ML-KEM-768 NIST FIPS 203)
+    "KEY_EXCHANGE": {
+        "target": "ML-KEM-768",
         "standard": "NIST FIPS 203",
-        "category": "Lattice Key Encapsulation (KEM)",
-        "public_key_bytes": 1184,
-        "ciphertext_bytes": 1088,
-        "security_category": 3,
-        "replaces": ["ECDH", "DH-2048", "RSA-OAEP", "CKM_RSA_PKCS_KEY_PAIR_GEN"]
+        "category": PrimitiveCategory.KEY_ENCAPSULATION.value,
+        "type": "Lattice Key Encapsulation Mechanism",
+        "required_output_bytes": 1088
     },
-    "SLH-DSA-128s": {
-        "standard": "NIST FIPS 205",
-        "category": "Stateless Hash-Based Digital Signature",
-        "public_key_bytes": 32,
-        "signature_bytes": 7856,
-        "security_category": 1,
-        "replaces": ["Fallback_Signatures"]
+    # Symmetric 3DES -> AES-256-GCM (Symmetric Replacement)
+    "3DES_ENCRYPTION": {
+        "target": "AES-256-GCM",
+        "standard": "NIST SP 800-38D",
+        "category": PrimitiveCategory.SYMMETRIC_CIPHER.value,
+        "type": "Authenticated Symmetric Block Cipher",
+        "required_output_bytes": 64
+    },
+    # Legacy SHA-1 MAC -> KMAC-256 (NIST SP 800-185)
+    "SHA1_MAC": {
+        "target": "KMAC-256",
+        "standard": "NIST SP 800-185",
+        "category": PrimitiveCategory.MAC.value,
+        "type": "Quantum-Resistant Message Authentication Code",
+        "required_output_bytes": 64
+    },
+    # Legacy MD5 / SHA-1 Hash -> SHA-384 / SHA-512 (FIPS 180-4)
+    "LEGACY_HASH": {
+        "target": "SHA-384",
+        "standard": "NIST FIPS 180-4",
+        "category": PrimitiveCategory.HASH_DIGEST.value,
+        "type": "Cryptographic Hash Function",
+        "required_output_bytes": 48
     }
 }
