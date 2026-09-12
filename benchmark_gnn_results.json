@@ -1,0 +1,32 @@
+{
+  "Heuristic Rule Engine": {
+    "ROC-AUC": 0.4984,
+    "PR-AUC": 0.0833,
+    "Precision@10": 0.0,
+    "Recall@10": 0.0,
+    "Precision@50": 0.6,
+    "Recall@50": 0.1587,
+    "Hits@10": 0.0,
+    "Inference_Latency_ms": 23.03
+  },
+  "Node-Pair MLP": {
+    "ROC-AUC": 0.984,
+    "PR-AUC": 0.9388,
+    "Precision@10": 1.0,
+    "Recall@10": 0.0529,
+    "Precision@50": 1.0,
+    "Recall@50": 0.2646,
+    "Hits@10": 1.0,
+    "Inference_Latency_ms": 430.23
+  },
+  "Heterogeneous Graph Transformer (HGT)": {
+    "ROC-AUC": 0.9884,
+    "PR-AUC": 0.9453,
+    "Precision@10": 1.0,
+    "Recall@10": 0.0529,
+    "Precision@50": 1.0,
+    "Recall@50": 0.2646,
+    "Hits@10": 1.0,
+    "Inference_Latency_ms": 4049.47
+  }
+}
