@@ -1,0 +1,47 @@
+{
+  "telemetry_source": "Linux eBPF Uprobe (libsofthsm2.so)",
+  "verified_events_count": 6,
+  "observed_transitions": [
+    {
+      "from_symbol": "C_Initialize",
+      "to_symbol": "C_OpenSession",
+      "pid": 1503,
+      "process": "java",
+      "delta_us": 11998.19,
+      "delta_ms": 11.9982
+    },
+    {
+      "from_symbol": "C_OpenSession",
+      "to_symbol": "C_OpenSession",
+      "pid": 1503,
+      "process": "java",
+      "delta_us": 55980.62,
+      "delta_ms": 55.9806
+    },
+    {
+      "from_symbol": "C_OpenSession",
+      "to_symbol": "C_SignInit",
+      "pid": 1503,
+      "process": "java",
+      "delta_us": 5820585.44,
+      "delta_ms": 5820.5854
+    },
+    {
+      "from_symbol": "C_SignInit",
+      "to_symbol": "C_SignUpdate",
+      "pid": 1503,
+      "process": "java",
+      "delta_us": 3320.06,
+      "delta_ms": 3.3201
+    },
+    {
+      "from_symbol": "C_SignUpdate",
+      "to_symbol": "C_SignFinal",
+      "pid": 1503,
+      "process": "java",
+      "delta_us": 415.86,
+      "delta_ms": 0.4159
+    }
+  ],
+  "signing_pipeline_latency_us": 3735.924
+}
