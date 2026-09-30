@@ -13,6 +13,19 @@ import networkx as nx
 
 from build_data_driven_kg import load_evidence, construct_evidence_driven_graph
 
+def infer_replacement_from_primitive(algo_name):
+    """Fallback resolver based on NIST/CNSA 2.0 cryptographic standards."""
+    name_upper = algo_name.upper()
+    if any(k in name_upper for k in ["RSA", "ECDSA", "DSA", "SIGN"]):
+        return "ML-DSA-65 (NIST FIPS 204)"
+    elif any(k in name_upper for k in ["DH", "ECDH", "KEM", "WRAP"]):
+        return "ML-KEM-768 (NIST FIPS 203)"
+    elif any(k in name_upper for k in ["AES", "DES", "3DES"]):
+        return "AES-256-GCM (CNSA 2.0)"
+    elif any(k in name_upper for k in ["SHA", "MD5", "RIPEMD", "GOSTR"]):
+        return "SHA3-512 (NIST FIPS 202)"
+    return "AES-256-GCM / ML-KEM-768"
+
 def generate_cyclonedx_cbom():
     print("================================================================================")
     print("  PHASE 6: CYCLONEDX v1.6 CRYPTOGRAPHIC BILL OF MATERIALS (CBOM) EXPORTER        ")
@@ -22,6 +35,14 @@ def generate_cyclonedx_cbom():
     sast, dast = load_evidence("production_sast_cbom_evidence.json", "production_dast_cbom_evidence.json")
     G = construct_evidence_driven_graph(sast, dast)
     print(f"[*] Ingested CCD-Graph: {G.number_of_nodes()} Entities, {G.number_of_edges()} Edges")
+
+    # Pre-compute MIGRATES_TO mappings directly from Graph Edges
+    migrates_to_map = {}
+    for u, v, d in G.edges(data=True):
+        if d.get("relation") == "MIGRATES_TO":
+            # Extract target name (strip 'PQCTarget::' prefix if present)
+            target_name = v.replace("PQCTarget::", "")
+            migrates_to_map[u] = target_name
 
     # 2. Load eBPF Latency Telemetry if available
     latency_profile = {}
@@ -68,11 +89,28 @@ def generate_cyclonedx_cbom():
         bom_ref = f"cbom-{uuid.uuid5(uuid.NAMESPACE_DNS, str(node_id))}"
         node_to_bom_ref[node_id] = bom_ref
 
-        # Distinguish cryptographic assets from source modules and memory buffers
         if nclass == "CryptoPrimitiveNode":
             algo_name = data.get("canonical_name") or data.get("name", node_id)
             urgency = data.get("quantum_urgency", 0.0)
-            
+            algo_upper = algo_name.upper()
+
+            # Determine primitive type
+            if any(k in algo_upper for k in ["SIGN", "RSA", "DSA", "ECDSA"]):
+                prim_type = "signature"
+                crypto_funcs = ["sign", "verify"]
+            elif any(k in algo_upper for k in ["SHA", "MD5", "RIPEMD", "GOSTR", "DIGEST"]):
+                prim_type = "message-digest"
+                crypto_funcs = ["digest"]
+            elif any(k in algo_upper for k in ["DH", "ECDH", "KEM"]):
+                prim_type = "key-exchange"
+                crypto_funcs = ["key-agreement"]
+            else:
+                prim_type = "block-cipher"
+                crypto_funcs = ["encrypt", "decrypt"]
+
+            # Resolve PQC replacement: Priority 1 = MIGRATES_TO graph edge, Priority 2 = Standard mapping
+            target_replacement = migrates_to_map.get(node_id) or infer_replacement_from_primitive(algo_name)
+
             comp = {
                 "type": "cryptographic-asset",
                 "bom-ref": bom_ref,
@@ -81,22 +119,22 @@ def generate_cyclonedx_cbom():
                 "cryptoProperties": {
                     "assetType": "algorithm",
                     "algorithmProperties": {
-                        "primitive": "signature" if "Sign" in algo_name or "RSA" in algo_name or "DSA" in algo_name else "block-cipher",
+                        "primitive": prim_type,
                         "parameterSetIdentifier": str(data.get("key_size_bits", "N/A")),
                         "executionEnvironment": "hardware-security-module" if "libsofthsm" in str(data) else "software-container",
-                        "cryptoFunctions": ["sign", "verify"] if "Sign" in algo_name else ["encrypt", "decrypt"]
+                        "cryptoFunctions": crypto_funcs
                     },
                     "oid": data.get("oid", "unknown")
                 },
                 "properties": [
                     {"name": "pqc:quantum_urgency_score", "value": str(urgency)},
                     {"name": "pqc:epistemic_provenance", "value": data.get("provenance", "TIER_2_AST_STATIC")},
-                    {"name": "pqc:replacement_target", "value": data.get("pqc_target", "ML-DSA-65")}
+                    {"name": "pqc:replacement_target", "value": target_replacement}
                 ]
             }
 
-            # Attach measured eBPF signing latency to primary asymmetric primitives
-            if ("RSA" in algo_name or "Sign" in algo_name) and "signing_pipeline_latency_us" in latency_profile:
+            # Attach measured eBPF signing latency to asymmetric signing primitives
+            if prim_type == "signature" and "signing_pipeline_latency_us" in latency_profile:
                 comp["properties"].append({
                     "name": "dast:signing_pipeline_latency_us",
                     "value": str(latency_profile["signing_pipeline_latency_us"])
@@ -138,20 +176,19 @@ def generate_cyclonedx_cbom():
             cbom["components"].append(comp)
 
         else:
-            # Source file or translation unit component
             comp = {
-                "type": "application" if ".java" in node_id else "library",
+                "type": "application" if ".java" in str(node_id) else "library",
                 "bom-ref": bom_ref,
-                "name": os.path.basename(node_id),
+                "name": os.path.basename(str(node_id)),
                 "description": f"Source module: {node_id}",
                 "properties": [
                     {"name": "source:path", "value": str(node_id)},
-                    {"name": "source:language", "value": "Java" if ".java" in node_id else "C/C++"}
+                    {"name": "source:language", "value": "Java" if ".java" in str(node_id) else "C/C++"}
                 ]
             }
             cbom["components"].append(comp)
 
-    # 5. Map Knowledge Graph Edges to CycloneDX Dependencies & Annotations
+    # 5. Map Knowledge Graph Edges to CycloneDX Dependencies
     deficit_count = 0
     for u, v, d in G.edges(data=True):
         if u not in node_to_bom_ref or v not in node_to_bom_ref:
@@ -167,7 +204,6 @@ def generate_cyclonedx_cbom():
             ]
         }
 
-        # Highlight Scoped Buffer Capacity Deficit Hazards in metadata
         if rel in ["BUFFER_CAPACITY_DEFICIT", "SCOPED_BUFFER_DEFICIT_HAZARD"]:
             deficit_count += 1
             dep_entry["properties"].extend([

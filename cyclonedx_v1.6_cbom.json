@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:73e34205-1b05-4541-8dcf-52518ffa76c0",
+  "serialNumber": "urn:uuid:b723a062-fbd6-4c69-9f8c-a419377cce5c",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-09-30T14:29:14.710822+00:00",
+    "timestamp": "2026-09-30T17:49:39.559563+00:00",
     "tools": {
       "components": [
         {
@@ -68,8 +68,8 @@
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "sign",
+            "verify"
           ]
         },
         "oid": "unknown"
@@ -85,7 +85,11 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "ML-DSA-65 (NIST FIPS 204)"
+        },
+        {
+          "name": "dast:signing_pipeline_latency_us",
+          "value": "3735.924"
         }
       ]
     },
@@ -129,12 +133,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -150,7 +153,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -162,12 +165,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -183,7 +185,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -195,12 +197,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -216,7 +217,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -232,8 +233,8 @@
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "sign",
+            "verify"
           ]
         },
         "oid": "unknown"
@@ -249,7 +250,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "ML-DSA-65 (NIST FIPS 204)"
         },
         {
           "name": "dast:signing_pipeline_latency_us",
@@ -286,7 +287,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "AES-256-GCM (CNSA 2.0)"
         }
       ]
     },
@@ -319,7 +320,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "AES-256-GCM (CNSA 2.0)"
         }
       ]
     },
@@ -352,7 +353,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "AES-256-GCM (CNSA 2.0)"
         }
       ]
     },
@@ -368,8 +369,8 @@
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "sign",
+            "verify"
           ]
         },
         "oid": "unknown"
@@ -385,7 +386,11 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "ML-DSA-65 (NIST FIPS 204)"
+        },
+        {
+          "name": "dast:signing_pipeline_latency_us",
+          "value": "3735.924"
         }
       ]
     },
@@ -401,8 +406,8 @@
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "sign",
+            "verify"
           ]
         },
         "oid": "unknown"
@@ -418,7 +423,11 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "ML-DSA-65 (NIST FIPS 204)"
+        },
+        {
+          "name": "dast:signing_pipeline_latency_us",
+          "value": "3735.924"
         }
       ]
     },
@@ -434,8 +443,8 @@
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "sign",
+            "verify"
           ]
         },
         "oid": "unknown"
@@ -451,7 +460,11 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "ML-DSA-65 (NIST FIPS 204)"
+        },
+        {
+          "name": "dast:signing_pipeline_latency_us",
+          "value": "3735.924"
         }
       ]
     },
@@ -463,12 +476,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -484,7 +496,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -496,12 +508,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -517,7 +528,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -529,12 +540,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -550,7 +560,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -562,12 +572,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -583,7 +592,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -595,12 +604,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -616,7 +624,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -628,12 +636,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -649,7 +656,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -661,12 +668,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -682,7 +688,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -694,12 +700,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -715,7 +720,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -727,12 +732,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -748,7 +752,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -781,7 +785,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "AES-256-GCM (CNSA 2.0)"
         }
       ]
     },
@@ -4398,7 +4402,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "AES-256-GCM / ML-KEM-768"
         }
       ]
     },
@@ -4431,7 +4435,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "AES-256-GCM / ML-KEM-768"
         }
       ]
     },
@@ -4464,7 +4468,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "AES-256-GCM / ML-KEM-768"
         }
       ]
     },
@@ -4497,7 +4501,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "AES-256-GCM / ML-KEM-768"
         }
       ]
     },
@@ -4530,7 +4534,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "AES-256-GCM / ML-KEM-768"
         }
       ]
     },
@@ -4563,7 +4567,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "AES-256-GCM / ML-KEM-768"
         }
       ]
     },
@@ -4596,7 +4600,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "AES-256-GCM / ML-KEM-768"
         }
       ]
     },
@@ -4629,7 +4633,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "AES-256-GCM / ML-KEM-768"
         }
       ]
     },
@@ -4641,12 +4645,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -4662,7 +4665,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -4674,12 +4677,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -4695,7 +4697,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -4707,12 +4709,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -4728,7 +4729,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -4740,12 +4741,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -4761,7 +4761,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -4773,12 +4773,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -4794,7 +4793,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -4806,12 +4805,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -4827,7 +4825,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -4839,12 +4837,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -4860,7 +4857,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -4872,12 +4869,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -4893,7 +4889,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -4905,12 +4901,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -4926,7 +4921,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -4938,12 +4933,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -4959,7 +4953,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -4971,12 +4965,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -4992,7 +4985,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5004,12 +4997,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5025,7 +5017,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5037,12 +5029,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5058,7 +5049,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5070,12 +5061,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5091,7 +5081,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5103,12 +5093,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5124,7 +5113,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5136,12 +5125,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5157,7 +5145,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5169,12 +5157,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5190,7 +5177,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5202,12 +5189,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5223,7 +5209,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5235,12 +5221,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5256,7 +5241,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5268,12 +5253,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5289,7 +5273,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5301,12 +5285,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5322,7 +5305,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5334,12 +5317,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5355,7 +5337,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5367,12 +5349,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5388,7 +5369,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5400,12 +5381,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5421,7 +5401,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5433,12 +5413,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5454,7 +5433,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5466,12 +5445,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5487,7 +5465,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5499,12 +5477,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5520,7 +5497,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5532,12 +5509,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5553,7 +5529,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5586,7 +5562,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "AES-256-GCM / ML-KEM-768"
         }
       ]
     },
@@ -5619,7 +5595,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "AES-256-GCM / ML-KEM-768"
         }
       ]
     },
@@ -5631,12 +5607,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5652,7 +5627,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5664,12 +5639,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5685,7 +5659,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5697,12 +5671,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5718,7 +5691,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5730,12 +5703,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5751,7 +5723,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5763,12 +5735,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5784,7 +5755,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5796,12 +5767,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5817,7 +5787,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5829,12 +5799,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5850,7 +5819,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5862,12 +5831,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5883,7 +5851,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5895,12 +5863,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5916,7 +5883,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5928,12 +5895,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5949,7 +5915,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5961,12 +5927,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -5982,7 +5947,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -5994,12 +5959,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -6015,7 +5979,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -6031,8 +5995,8 @@
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "sign",
+            "verify"
           ]
         },
         "oid": "unknown"
@@ -6048,7 +6012,11 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "ML-DSA-65 (NIST FIPS 204)"
+        },
+        {
+          "name": "dast:signing_pipeline_latency_us",
+          "value": "3735.924"
         }
       ]
     },
@@ -6064,8 +6032,8 @@
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "sign",
+            "verify"
           ]
         },
         "oid": "unknown"
@@ -6081,7 +6049,11 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "ML-DSA-65 (NIST FIPS 204)"
+        },
+        {
+          "name": "dast:signing_pipeline_latency_us",
+          "value": "3735.924"
         }
       ]
     },
@@ -6097,8 +6069,8 @@
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "sign",
+            "verify"
           ]
         },
         "oid": "unknown"
@@ -6114,7 +6086,11 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "ML-DSA-65 (NIST FIPS 204)"
+        },
+        {
+          "name": "dast:signing_pipeline_latency_us",
+          "value": "3735.924"
         }
       ]
     },
@@ -6130,8 +6106,8 @@
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "sign",
+            "verify"
           ]
         },
         "oid": "unknown"
@@ -6147,7 +6123,11 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "ML-DSA-65 (NIST FIPS 204)"
+        },
+        {
+          "name": "dast:signing_pipeline_latency_us",
+          "value": "3735.924"
         }
       ]
     },
@@ -6163,8 +6143,8 @@
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "sign",
+            "verify"
           ]
         },
         "oid": "unknown"
@@ -6180,7 +6160,11 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "ML-DSA-65 (NIST FIPS 204)"
+        },
+        {
+          "name": "dast:signing_pipeline_latency_us",
+          "value": "3735.924"
         }
       ]
     },
@@ -6196,8 +6180,8 @@
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "sign",
+            "verify"
           ]
         },
         "oid": "unknown"
@@ -6213,7 +6197,11 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "ML-DSA-65 (NIST FIPS 204)"
+        },
+        {
+          "name": "dast:signing_pipeline_latency_us",
+          "value": "3735.924"
         }
       ]
     },
@@ -9153,12 +9141,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -9174,7 +9161,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
@@ -10242,12 +10229,11 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "block-cipher",
+          "primitive": "message-digest",
           "parameterSetIdentifier": "N/A",
           "executionEnvironment": "software-container",
           "cryptoFunctions": [
-            "encrypt",
-            "decrypt"
+            "digest"
           ]
         },
         "oid": "unknown"
@@ -10263,7 +10249,7 @@
         },
         {
           "name": "pqc:replacement_target",
-          "value": "ML-DSA-65"
+          "value": "SHA3-512 (NIST FIPS 202)"
         }
       ]
     },
