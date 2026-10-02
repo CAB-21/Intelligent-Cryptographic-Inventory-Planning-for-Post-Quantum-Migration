@@ -1,0 +1,4772 @@
+[
+  {
+    "source": "Source::P11Attributes.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 0.2957,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::P11Attributes.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 0.2957,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512",
+    "hgt_score": 0.369,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512",
+    "hgt_score": 0.369,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512",
+    "hgt_score": 0.369,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512",
+    "hgt_score": 0.369,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512",
+    "hgt_score": 0.369,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512",
+    "hgt_score": 0.369,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512",
+    "hgt_score": 0.369,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512",
+    "hgt_score": 0.369,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384",
+    "hgt_score": 0.2528,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384",
+    "hgt_score": 0.2528,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384",
+    "hgt_score": 0.2528,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256",
+    "hgt_score": 0.3,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256",
+    "hgt_score": 0.3,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256",
+    "hgt_score": 0.3,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256",
+    "hgt_score": 0.3,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256",
+    "hgt_score": 0.3,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256",
+    "hgt_score": 0.3,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_GOSTR3411_HMAC",
+    "hgt_score": 0.9981,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::3DES-EDE-168",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::3DES-EDE-168",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::3DES-EDE-168",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::3DES-EDE-168",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::3DES-EDE-168",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::3DES-EDE-168",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::3DES-EDE-168",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::3DES-EDE-168",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::3DES-EDE-168",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::3DES-EDE-168",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::3DES-EDE-168",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-256-GCM",
+    "hgt_score": 0.9984,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_PBA_SHA1_WITH_SHA1_HMAC",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::SHA-1",
+    "hgt_score": 0.9999,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::SHA-1",
+    "hgt_score": 0.9999,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::SHA-1",
+    "hgt_score": 0.9999,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::SHA-1",
+    "hgt_score": 0.9999,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::SHA-1",
+    "hgt_score": 0.9999,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::SHA-1",
+    "hgt_score": 0.9999,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::SHA-1",
+    "hgt_score": 0.9999,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::SHA-1",
+    "hgt_score": 0.9999,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::SHA-1",
+    "hgt_score": 0.9999,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::MD5",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::MD5",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::MD5",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::MD5",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::MD5",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::MD5",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::MD5",
+    "hgt_score": 1.0,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_KEY_DERIVATION",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_KEY_DERIVATION",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_KEY_DERIVATION",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_HMAC_GENERAL",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_HMAC",
+    "hgt_score": 0.9992,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512",
+    "hgt_score": 0.9999,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_HMAC_GENERAL",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_HMAC",
+    "hgt_score": 0.9991,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384",
+    "hgt_score": 0.9999,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA224_HMAC_GENERAL",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA224_HMAC",
+    "hgt_score": 0.9981,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_HMAC_GENERAL",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_HMAC",
+    "hgt_score": 0.9992,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256",
+    "hgt_score": 0.9999,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD160_HMAC_GENERAL",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD160_HMAC",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD128_HMAC_GENERAL",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD128_HMAC",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA_1_HMAC_GENERAL",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA_1_HMAC",
+    "hgt_score": 0.9991,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD5_HMAC_GENERAL",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD5_HMAC",
+    "hgt_score": 0.9981,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD2_HMAC_GENERAL",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD2_HMAC",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::DES-56",
+    "hgt_score": 0.9999,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::DES-56",
+    "hgt_score": 0.9999,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::DES-56",
+    "hgt_score": 0.9999,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_KEY_DERIVATION",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_HMAC_GENERAL",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_HMAC",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_KEY_DERIVATION",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_HMAC_GENERAL",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_HMAC",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_KEY_DERIVATION",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_HMAC_GENERAL",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_HMAC",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224",
+    "hgt_score": 0.1874,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA512",
+    "hgt_score": 0.9912,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA384",
+    "hgt_score": 0.9912,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA256",
+    "hgt_score": 0.9976,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::softhsm2-util-ossl.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 0.8033,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util-ossl.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 0.8033,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util-ossl.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 0.8033,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util-ossl.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 0.8033,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util-ossl.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 0.8033,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util-ossl.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 0.8033,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Q2.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::DES-56",
+    "hgt_score": 0.003,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SensitiveString.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 0.1046,
+    "ground_truth": true,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::getpassphase.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::MD5",
+    "hgt_score": 0.0061,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::HandleManager.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionObject.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSAttributes.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::X25Channel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_PBA_SHA1_WITH_SHA1_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::VISA1Packager.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::P11Objects.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::RandomTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 0.3896,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Q2.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA_1_HMAC",
+    "hgt_score": 0.0002,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSTokenTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "NativeLibrary::libsofthsm2.so",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DigestTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSSLMLDSA.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_GOSTR3411_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::ModuleUtils.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_GOSTR3411_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AESTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MD5Template.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA384",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionObjectStore.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SlotManagerTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::tables.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_384_HMAC_GENERAL",
+    "hgt_score": 0.15,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::JCESecurityModule.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::HmacSHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::PGPHelper.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DB.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_384_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Console.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AESTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA224_HMAC_GENERAL",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::CSChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA512",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::ByteString.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::SHA-256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBTokenTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA384",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::HEXChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA384",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::TokenTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_512_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::TokenTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_GOSTR3411_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionManager.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::HmacSHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::TLVList.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Token.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256",
+    "hgt_score": 0.007,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::getopt.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_ML_DSA_SHA384",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::GICCChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_512_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionObjectStoreTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util-ossl.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::BaseChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_384_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::JDBMSpace.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-256-GCM",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::IF_NOP.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA512",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SimpleConfigurationFactory.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::TokenTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 0.2957,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SensitiveString.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AmexChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA224_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::iso8859.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-256-GCM",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::GenericSSLSocketFactory.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::IFMC_TCC.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSTokenTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DESTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MacroFilter.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD160_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AESTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_224_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSSLMLDSA.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::3DES-EDE-168",
+    "hgt_score": 0.0163,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::BaseChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA224_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::JTabbedPaneFactory.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AsymEncryptDecryptTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_224_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::VISA1Packager.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::PosCapability.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_SLH_DSA_SHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Slot.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_160_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::InfoTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::ObjectFile.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::IFEMC_TCC.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_224_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-migrate.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD5_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AESTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_KEY_GEN",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SensitiveString.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AsymWrapUnwrapTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::MD5",
+    "hgt_score": 0.83,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::X25Channel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_256_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::BERTLVPackager.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::HmacSHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::iso8859.c",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA256",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::ISOServer.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-migrate.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::HmacSHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSSLMLKEMPublicKey.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::getopt.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionManager.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::TaggedFieldPackagerBase.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::3DES-EDE-168",
+    "hgt_score": 0.0078,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util-ossl.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD2_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::base64.c",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_256_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MacroFilter.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSSLMLKEMPrivateKey.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::MD5",
+    "hgt_score": 0.0087,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MD5Filter.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_384_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SimpleConfiguration.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Install.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_HMAC",
+    "hgt_score": 0.0002,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionObjectStore.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD2_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::P11Attributes.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-dump-file.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 0.0515,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::EncapDecapTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_256_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::main.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA224_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SignVerifyTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_SLH_DSA_SHA512",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::BASE24Channel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_256_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSSLMLDSAPublicKey.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSSLMLDSAPrivateKey.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD128_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util-botan.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObject.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_512_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSSLMLDSA.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_512_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::IF_NOP.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSSLMLKEMPrivateKey.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MLDSAUtil.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_256_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::JDBMSpace.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_512_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SimpleConfigLoader.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::HandleManagerTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_160_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_160_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::ObjectTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Session.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_160_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::CSChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD128_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::RBPChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionObjectStoreTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_224_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::ObjectFileTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_512_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::getpassphase.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::FileTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_HMAC",
+    "hgt_score": 0.0002,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionObjectStoreTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DESTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_SLH_DSA_SHA384",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::JCESecurityModule.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_512_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::CLICommandInterface.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_SLH_DSA_SHA512",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::IF_NOP.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionManager.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Q2.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_HMAC",
+    "hgt_score": 0.0002,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObject.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_ML_DSA_SHA512",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AESTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::ObjectTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_512_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::IF_NOP.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::RSA-2048_PKCS#1",
+    "hgt_score": 0.2966,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::findslot.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::IFMC_TCC.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_384_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Session.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD128_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::TokenTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::main.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD5_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::P11Attributes.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::SHA-256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::syslog.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD128_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SimpleConfiguration.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Install.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_160_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::ISOUtil.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_224_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util-botan.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_224_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::IFMC_TCC.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_ML_DSA_SHA384",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::FileTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_256_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::TestsNoPINInitBase.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::SHA-1",
+    "hgt_score": 0.0019,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SimpleConfiguration.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA384",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObject.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Token.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_PBA_SHA1_WITH_SHA1_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::HandleManager.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::HmacSHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SymmetricAlgorithmTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD5_HMAC_GENERAL",
+    "hgt_score": 0.0253,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AESTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD128_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SimpleConfigLoader.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_ML_DSA_SHA384",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::CLICommandInterface.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_256_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_384_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::HEXChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_HMAC",
+    "hgt_score": 0.0002,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SoftHSM.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_384_HMAC_GENERAL",
+    "hgt_score": 0.9233,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::EncapDecapTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD2_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AsymWrapUnwrapTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MLDSAUtil.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD5_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::ent.c",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA224_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::NCCChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::log.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::MD5",
+    "hgt_score": 0.0061,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::getpassphase.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AmexChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA224_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Install.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256",
+    "hgt_score": 0.0037,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MLKEMUtil.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DeriveTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_224_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSSLMLDSAPrivateKey.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_PBA_SHA1_WITH_SHA1_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::common.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-migrate.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA224_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DigestTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::IF_NOP.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_256_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SignVerifyTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSSLMLKEMPublicKey.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::HmacSHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionManager.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_256_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::JTabbedPaneFactory.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA256",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::HandleManagerTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DigestTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::BASE24Channel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA384",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionObject.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_ML_DSA_SHA512",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::BASE24Channel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AmexChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD160_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Install.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::SHA-1",
+    "hgt_score": 0.0027,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::UUID.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_384_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DigestTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_ML_DSA_SHA512",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSAttributes.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionManager.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::SHA-256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::IFEMC_TCC.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD2_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::TokenTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_224_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util-ossl.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_160_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSAttributes.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::HandleManager.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSSLMLKEMPrivateKey.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_SLH_DSA_SHA384",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MD5Filter.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::DES-56",
+    "hgt_score": 0.003,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::NCCChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_160_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SignVerifyTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_KEY_DERIVATION",
+    "hgt_score": 0.8275,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::RawChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SensitiveString.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_PBA_SHA1_WITH_SHA1_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util-botan.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::PosDataCode.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_SLH_DSA_SHA384",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::FSDMsg.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MLKEMUtil.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 0.1574,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObject.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::MD5",
+    "hgt_score": 0.0087,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::RBPChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 0.0515,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::ModuleUtils.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::FileTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_ML_DSA_SHA384",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::GenericSSLSocketFactory.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionObject.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_SLH_DSA_SHA384",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util-ossl.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_SLH_DSA_SHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD5_HMAC",
+    "hgt_score": 0.0002,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Slot.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA_1_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSAttributes.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::ECDSA-P256",
+    "hgt_score": 0.1574,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionObjectStoreTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_ML_DSA_SHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AsymEncryptDecryptTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD128_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::IF_NOP.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::JDBMSpace.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::EncapDecapTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DeriveTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_512_HMAC_GENERAL",
+    "hgt_score": 0.0003,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSAttributes.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionManagerTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA_1_HMAC",
+    "hgt_score": 0.0002,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SimpleConfiguration.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA224_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSSLMLKEMPrivateKey.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD5_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MacroFilter.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_512_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util-ossl.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_HMAC",
+    "hgt_score": 0.0015,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util-ossl.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_ML_DSA_SHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MD5Filter.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA224_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::IFMC_TCC.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_224_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Session.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::3DES-EDE-168",
+    "hgt_score": 0.0078,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::library.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_512_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DeriveTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::EncapDecapTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD128_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AsymEncryptDecryptTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionObject.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_384_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::RBPChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DESTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD128_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::getpassphase.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBTokenTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::iso8859.c",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_PBA_SHA1_WITH_SHA1_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::PosCapability.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD5_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AsymWrapUnwrapTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA384",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MLKEMUtil.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_ML_DSA_SHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::HandleManager.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::FileTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA256",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Install.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::GICCChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA512",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::VAPChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD128_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::odd.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSSLMLDSAPublicKey.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SymmetricAlgorithmTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_HMAC_GENERAL",
+    "hgt_score": 0.0253,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::BCDChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_512_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::ModuleUtils.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_SLH_DSA_SHA384",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MD5Filter.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_224_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SignVerifyTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD5_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::TLVMsg.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384",
+    "hgt_score": 0.0042,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AsymWrapUnwrapTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_ML_DSA_SHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionObject.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSAttributes.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD128_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SoftHSM.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_KEY_DERIVATION",
+    "hgt_score": 0.9394,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::ObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AsymWrapUnwrapTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384",
+    "hgt_score": 0.0022,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AESTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_HMAC_GENERAL",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::TLVList.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_SLH_DSA_SHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DeriveTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA384",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "NativeLibrary::libsofthsm2.so",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_ML_DSA_SHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::VAPChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::SHA-256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AsymWrapUnwrapTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384",
+    "hgt_score": 0.635,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-dump-file.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA224_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::EncapDecapTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_PBA_SHA1_WITH_SHA1_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::PosDataCode.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_DSA_SHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::UUID.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_512_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::handlemgrtest.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_512_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::FileTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MD5Template.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_384_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::PosCapability.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_384_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::QFactory.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSTokenTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionObjectStore.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSTokenTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_PBA_SHA1_WITH_SHA1_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::ISOServer.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::HmacSHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::FSDMsg.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD2_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MD5Template.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-256-GCM",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::HashTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD2_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MD5Template.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::HmacSHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::UUID.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA_1_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AsymEncryptDecryptTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBTokenTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DB.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA_1_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util-ossl.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSSLMLDSAPrivateKey.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::MacroFilter.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_384_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::TokenTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionManagerTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA3_384_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SoftHSM.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA256_HMAC_GENERAL",
+    "hgt_score": 0.9394,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "TIER_4_GNN_INFERRED"
+  },
+  {
+    "source": "Source::UserTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::PosDataCode.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::X25Channel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::BASE24Channel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::softhsm2-util.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::syslog.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384",
+    "hgt_score": 0.003,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Slot.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::TestsBase.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_384_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionObject.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA_1_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::TestsNoPINInitBase.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::FileTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_RIPEMD128_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::BASE1Header.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DeriveTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::PGPHelper.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_HMAC",
+    "hgt_score": 0.0002,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::BaseChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::Q2.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::JCESecurityModule.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD2_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBToken.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::UserTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA384_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::BERTLVPackager.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_ML_DSA_SHA512",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::CSChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD2_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::ZipUtil.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_160_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SimpleConfiguration.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_HMAC",
+    "hgt_score": 0.0011,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SymmetricAlgorithmTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_HMAC",
+    "hgt_score": 0.0001,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::DBObjectTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_HASH_SLH_DSA_SHA512",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SymmetricAlgorithmTests.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_256_KEY_GEN",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::SessionManager.h",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_384_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::ISOUtil.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::HmacSHA256",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::BERTLVPackager.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_224_HMAC",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::AsymEncryptDecryptTests.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_MD5_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::ISOUtil.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::AES-128",
+    "hgt_score": 0.0515,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::CSChannel.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_T_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::OSSLMLKEMPrivateKey.cpp",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_SHA512_KEY_DERIVATION",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  },
+  {
+    "source": "Source::GenericSSLSocketFactory.java",
+    "relation": "CALLS_API",
+    "target": "Crypto::CKM_BLAKE2B_384_HMAC_GENERAL",
+    "hgt_score": 0.0,
+    "ground_truth": false,
+    "was_in_training_graph": false,
+    "split": "inductive_test",
+    "provenance": "UNPROMOTED_CANDIDATE"
+  }
+]
