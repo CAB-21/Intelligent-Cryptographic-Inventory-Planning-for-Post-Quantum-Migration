@@ -1,9 +1,12 @@
 """
 benchmark_gnn_rigorous_validation.py
-Phase 4: Experimental Rigor & Inductive Generalization Benchmark
-Trains Heuristic, Node-Pair MLP, HGT, and Ablated HGT over 5 random seeds
-across Transductive and Inductive splits, computing ROC-AUC, PR-AUC, and Prec@50.
-Exports real model predictions for the Inductive split to hgt_inductive_predictions.json.
+Phase 4: Publication-Grade Rigorous Benchmark & Inductive Generalization
+Fixes Included:
+1. Strict Disjoint Negative Sampling for both Transductive and Inductive splits (zero leakage).
+2. Canonical Multi-Relational Edge Handling: keeps distinct (u, v, relation) triplets.
+3. Training-Subgraph-Only Feature Computation: dynamically calculates degrees without global graph leakage.
+4. Exact Multi-Relational Type Propagation: passes true edge relations into HGT convolution.
+5. Exports detailed candidate-level predictions with ground-truth labels for auditing.
 """
 
 import os
@@ -17,9 +20,6 @@ from sklearn.metrics import roc_auc_score, precision_recall_curve, auc
 
 from build_data_driven_kg import load_evidence, construct_evidence_driven_graph
 
-# ------------------------------------------------------------------------------
-# 1. Deterministic Seeding
-# ------------------------------------------------------------------------------
 def set_seed(seed):
     random.seed(seed)
     np.random.seed(seed)
@@ -27,9 +27,6 @@ def set_seed(seed):
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
-# ------------------------------------------------------------------------------
-# 2. Evaluation Metrics
-# ------------------------------------------------------------------------------
 def compute_metrics(y_true, y_pred):
     y_true = np.array(y_true)
     y_pred = np.array(y_pred)
@@ -41,16 +38,12 @@ def compute_metrics(y_true, y_pred):
     p, r, _ = precision_recall_curve(y_true, y_pred)
     pr_auc = float(auc(r, p))
     
-    # Precision@50
     k = min(50, len(y_pred))
     top_k_indices = np.argsort(y_pred)[::-1][:k]
     prec_at_50 = float(np.mean(y_true[top_k_indices])) if k > 0 else 0.0
     
     return roc, pr_auc, prec_at_50
 
-# ------------------------------------------------------------------------------
-# 3. Model Architectures
-# ------------------------------------------------------------------------------
 class NodePairMLP(nn.Module):
     def __init__(self, in_dim, hidden_dim=64):
         super().__init__()
@@ -66,6 +59,7 @@ class SimpleHGTLayer(nn.Module):
     def __init__(self, in_dim, out_dim, num_types=5, num_relations=5):
         super().__init__()
         self.out_dim = out_dim
+        self.num_relations = num_relations
         self.W_q = nn.Parameter(torch.Tensor(num_types, in_dim, out_dim))
         self.W_k = nn.Parameter(torch.Tensor(num_types, in_dim, out_dim))
         self.W_v = nn.Parameter(torch.Tensor(num_types, in_dim, out_dim))
@@ -125,10 +119,7 @@ class HGTLinkPredictor(nn.Module):
         score = (h[src] * self.distmult_m * h[dst]).sum(dim=-1)
         return torch.sigmoid(score), h
 
-# ------------------------------------------------------------------------------
-# 4. Graph Preparation and Feature Extraction
-# ------------------------------------------------------------------------------
-def prepare_graph_data():
+def prepare_base_graph():
     sast, dast = load_evidence("production_sast_cbom_evidence.json", "production_dast_cbom_evidence.json")
     G = construct_evidence_driven_graph(sast, dast)
     
@@ -142,52 +133,55 @@ def prepare_graph_data():
         node_types.append(type_map.get(cls, 0))
     node_types = torch.tensor(node_types, dtype=torch.long)
     
-    # Feature construction
-    deg = dict(G.degree())
-    features = []
-    for n in nodes:
-        cls = G.nodes[n].get("node_class", "SourceNode")
-        one_hot = [0.0] * 5
-        one_hot[type_map.get(cls, 0)] = 1.0
-        norm_deg = [float(deg.get(n, 1)) / 50.0]
-        urgency = [float(G.nodes[n].get("quantum_urgency", 0.0))]
-        features.append(one_hot + norm_deg + urgency)
-    x = torch.tensor(features, dtype=torch.float)
-    
-    target_edges = []
+    urgency_vec = [float(G.nodes[n].get("quantum_urgency", 0.0)) for n in nodes]
     rel_map = {"CALLS_API": 0, "ALLOCATES_BUFFER": 1, "MIGRATES_TO": 2, "DEPENDS_ON": 3}
-    all_edges = []
-    all_edge_types = []
+    
+    # Retain distinct (u, v, r) triplets
+    unique_triplets = set()
+    target_edges_set = set()
     
     for u, v, d in G.edges(data=True):
         u_idx, v_idx = node_to_idx[u], node_to_idx[v]
         r = d.get("relation", "DEPENDS_ON")
         r_idx = rel_map.get(r, 3)
-        all_edges.append((u_idx, v_idx))
-        all_edge_types.append(r_idx)
+        
+        unique_triplets.add((u_idx, v_idx, r_idx))
         if r == "CALLS_API":
-            target_edges.append((u_idx, v_idx))
-            
-    return G, nodes, node_to_idx, x, node_types, all_edges, all_edge_types, target_edges
+            target_edges_set.add((u_idx, v_idx))
 
-# ------------------------------------------------------------------------------
-# 5. Benchmark Engine with Real Training Loop
-# ------------------------------------------------------------------------------
+    all_edges = [(u, v) for (u, v, r) in unique_triplets]
+    all_edge_types = [r for (u, v, r) in unique_triplets]
+    target_edges = list(target_edges_set)
+
+    return G, nodes, node_to_idx, node_types, urgency_vec, type_map, all_edges, all_edge_types, target_edges
+
+def compute_split_features(num_nodes, node_types, urgency_vec, visible_edge_list):
+    degrees = [0] * num_nodes
+    for u, v in visible_edge_list:
+        degrees[u] += 1
+        degrees[v] += 1
+        
+    features = []
+    for i in range(num_nodes):
+        t = node_types[i].item()
+        one_hot = [0.0] * 5
+        one_hot[t] = 1.0
+        norm_deg = [float(degrees[i]) / 50.0]
+        urgency = [urgency_vec[i]]
+        features.append(one_hot + norm_deg + urgency)
+    return torch.tensor(features, dtype=torch.float)
+
 def run_benchmark():
     print("================================================================================")
-    print("  PHASE 4: EXPERIMENTAL RIGOR & INDUCTIVE GENERALIZATION BENCHMARK              ")
+    print("  PHASE 4: EXPERIMENTAL RIGOR & DISJOINT INDUCTIVE/TRANSDUCTIVE BENCHMARK       ")
     print("================================================================================")
 
-    G, nodes, node_to_idx, x, node_types, all_edges, all_edge_types, target_edges = prepare_graph_data()
+    G, nodes, node_to_idx, node_types, urgency_vec, type_map, all_edges, all_edge_types, target_edges = prepare_base_graph()
+    num_nodes = len(nodes)
+    
     source_indices = [node_to_idx[n] for n in nodes if G.nodes[n].get("node_class") == "SourceNode"]
     crypto_indices = [node_to_idx[n] for n in nodes if G.nodes[n].get("node_class") == "CryptoPrimitiveNode"]
-    
     existing_target_set = set(target_edges)
-    possible_negatives = []
-    for s in source_indices:
-        for c in crypto_indices:
-            if (s, c) not in existing_target_set:
-                possible_negatives.append((s, c))
 
     seeds = [42, 101, 2024, 7, 999]
     splits = ["transductive", "inductive"]
@@ -209,7 +203,26 @@ def run_benchmark():
                 split_idx = int(0.8 * len(shuffled_pos))
                 train_pos = shuffled_pos[:split_idx]
                 test_pos = shuffled_pos[split_idx:]
+                
+                # STRICT TRANSDUCTIVE DISJOINT NEGATIVE SAMPLING
+                all_possible_negs = [
+                    (s, c) for s in source_indices for c in crypto_indices 
+                    if (s, c) not in existing_target_set
+                ]
+                random.shuffle(all_possible_negs)
+                
+                n_train_neg = min(len(train_pos) * 2, len(all_possible_negs) // 2)
+                n_test_neg = min(len(test_pos) * 2, len(all_possible_negs) - n_train_neg)
+                
+                train_neg = all_possible_negs[:n_train_neg]
+                test_neg = all_possible_negs[n_train_neg:n_train_neg + n_test_neg]
+                
+                train_edge_indices = [i for i, e in enumerate(all_edges) if e not in set(test_pos)]
+                train_edge_list = [all_edges[i] for i in train_edge_indices]
+                train_edge_types = [all_edge_types[i] for i in train_edge_indices]
+
             else:
+                # STRICT COLD-START INDUCTIVE PARTITIONING
                 shuffled_src = random.sample(source_indices, len(source_indices))
                 split_idx = int(0.8 * len(shuffled_src))
                 train_src_set = set(shuffled_src[:split_idx])
@@ -218,52 +231,75 @@ def run_benchmark():
                 train_pos = [(u, v) for (u, v) in target_edges if u in train_src_set]
                 test_pos = [(u, v) for (u, v) in target_edges if u in test_src_set]
 
-            train_neg = random.sample(possible_negatives, min(len(train_pos) * 2, len(possible_negatives)))
-            test_neg = random.sample(possible_negatives, min(len(test_pos) * 2, len(possible_negatives)))
-            
-            test_pairs = test_pos + test_neg
-            test_labels = [1] * len(test_pos) + [0] * len(test_neg)
-            test_pairs_tensor = torch.tensor(test_pairs, dtype=torch.long)
-            
-            # Training edges for message passing (held-out test edges excluded)
-            train_edge_set = set(all_edges) - set(test_pos)
-            train_edge_list = list(train_edge_set)
+                # STRICT NEGATIVE POOL DISJUNCTION (zero test sources in train negatives)
+                train_possible_negs = [
+                    (s, c) for s in train_src_set for c in crypto_indices
+                    if (s, c) not in existing_target_set
+                ]
+                test_possible_negs = [
+                    (s, c) for s in test_src_set for c in crypto_indices
+                    if (s, c) not in existing_target_set
+                ]
+
+                train_neg = random.sample(train_possible_negs, min(len(train_pos) * 2, len(train_possible_negs)))
+                test_neg = random.sample(test_possible_negs, min(len(test_pos) * 2, len(test_possible_negs)))
+
+                # Strictly isolate graph topology: Test sources cannot pass messages during training
+                train_edge_indices = [
+                    i for i, (u, v) in enumerate(all_edges) 
+                    if (u not in test_src_set and v not in test_src_set) and (u, v) not in set(test_pos)
+                ]
+                train_edge_list = [all_edges[i] for i in train_edge_indices]
+                train_edge_types = [all_edge_types[i] for i in train_edge_indices]
+
+            # DYNAMIC DEGREE COMPUTATION (Calculated strictly on training graph)
+            x_train = compute_split_features(num_nodes, node_types, urgency_vec, train_edge_list)
+
+            # PyTorch Tensors
             edge_index = torch.tensor(train_edge_list, dtype=torch.long).t().contiguous()
-            edge_types = torch.zeros(edge_index.size(1), dtype=torch.long)
+            edge_types = torch.tensor(train_edge_types, dtype=torch.long)
 
             train_pairs = train_pos + train_neg
             train_labels = [1.0] * len(train_pos) + [0.0] * len(train_neg)
             train_pairs_tensor = torch.tensor(train_pairs, dtype=torch.long)
             train_labels_tensor = torch.tensor(train_labels, dtype=torch.float)
 
-            # ---------------- Model Training & Evaluation ----------------
+            test_pairs = test_pos + test_neg
+            test_labels = [1] * len(test_pos) + [0] * len(test_neg)
+            test_pairs_tensor = torch.tensor(test_pairs, dtype=torch.long)
+
+            # ---------------- Model Evaluation ----------------
             for m in models:
                 if m == "Heuristic":
-                    scores = [float(G.degree(nodes[u])) / 50.0 for (u, v) in test_pairs]
+                    degrees = [0] * num_nodes
+                    for u, v in train_edge_list:
+                        degrees[u] += 1
+                        degrees[v] += 1
+                    scores = [float(degrees[u]) / 50.0 for (u, v) in test_pairs]
 
                 elif m == "Node-Pair MLP":
-                    mlp = NodePairMLP(x.size(1))
+                    mlp = NodePairMLP(x_train.size(1))
                     optimizer = torch.optim.Adam(mlp.parameters(), lr=0.01, weight_decay=1e-4)
                     criterion = nn.BCELoss()
 
                     mlp.train()
                     for epoch in range(50):
                         optimizer.zero_grad()
-                        pred = mlp(x[train_pairs_tensor[:, 0]], x[train_pairs_tensor[:, 1]])
+                        pred = mlp(x_train[train_pairs_tensor[:, 0]], x_train[train_pairs_tensor[:, 1]])
                         loss = criterion(pred, train_labels_tensor)
                         loss.backward()
                         optimizer.step()
 
                     mlp.eval()
                     with torch.no_grad():
-                        scores = mlp(x[test_pairs_tensor[:, 0]], x[test_pairs_tensor[:, 1]]).numpy().tolist()
+                        scores = mlp(x_train[test_pairs_tensor[:, 0]], x_train[test_pairs_tensor[:, 1]]).numpy().tolist()
 
                 elif "HGT" in m:
-                    hgt_model = HGTLinkPredictor(x.size(1))
+                    hgt_model = HGTLinkPredictor(x_train.size(1))
                     optimizer = torch.optim.Adam(hgt_model.parameters(), lr=0.01, weight_decay=1e-4)
                     criterion = nn.BCELoss()
 
-                    cur_x = x.clone()
+                    cur_x = x_train.clone()
                     if "-DAST" in m:
                         cur_x[node_types == 4] = 0.0
 
@@ -292,8 +328,8 @@ def run_benchmark():
                                     "hgt_score": round(score, 4),
                                     "ground_truth": bool(label == 1),
                                     "was_in_training_graph": False,
-                                    "split": "inductive_test",
-                                    "provenance": "TIER_4_GNN_INFERRED" if score >= 0.85 else "UNPROMOTED_CANDIDATE"
+                                    "split": "cold_start_inductive_test",
+                                    "provenance": "TIER_4_GNN_CANDIDATE" if score >= 0.85 else "UNPROMOTED_CANDIDATE"
                                 })
 
                 roc, pr, prec = compute_metrics(test_labels, scores)
@@ -312,7 +348,7 @@ def run_benchmark():
     out_preds_file = "hgt_inductive_predictions.json"
     with open(out_preds_file, "w") as f:
         json.dump(exported_predictions, f, indent=2)
-    print(f"\n[+] Inductive test candidate predictions saved to '{out_preds_file}' ({len(exported_predictions)} candidates evaluated).")
+    print(f"\n[+] Cold-start inductive candidate predictions saved to '{out_preds_file}' ({len(exported_predictions)} pairs).")
 
     summary_file = "benchmark_gnn_rigorous_results.json"
     serializable = {}
@@ -329,7 +365,7 @@ def run_benchmark():
             }
     with open(summary_file, "w") as f:
         json.dump(serializable, f, indent=2)
-    print(f"[+] Benchmark summary statistics saved to '{summary_file}'.")
+    print(f"[+] Summary statistics saved to '{summary_file}'.")
 
 if __name__ == "__main__":
     run_benchmark()
